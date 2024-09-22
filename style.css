@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Home{
+    position: relative;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+    overflow: hidden;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 90px;
+    opacity: 0;
+    animation: to-bottom 1s ease forwards;
+}
+
+header nav a{
+    font-size: 24px;
+    margin-left: 60px;
+    color: white;
+    transition: .3s;
+}
+
+header nav .active,
+header nav a:hover{
+    color: #2e6ceb;
+}
+
+.content-box {
+    width: 50%;
+    color: white;
+    display: flex;
+    align-items: end;
+}
+
+.text-box h3{
+    font-size: 35px;
+    animation: to-right 1s ease forwards .6s;
+}
+
+.text-box h1 {
+    font-size: 55px;
+    animation: to-right 1s ease forwards .7s;
+
+}
+
+.text-box h1:nth-child(3){
+    font-size: 35px;
+    animation-delay: .8s;
+}
+
+.text-box .skills{
+    color: #2e6ceb;
+}
+
+.text-box p{
+    margin: 30px 0;
+    color: #fafafa;
+    font-size: 25px;
+    animation: to-right 1s ease forwards .8s;
+}
+
+.btn-box {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    color: white;
+    width: 190px;
+    height: 55px;
+    border: 2px solid #2e6ceb;
+    background-color: #2e6ceb;
+    box-shadow: 0 0 15px #2e6ceb;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    animation: to-right 1s ease forwards .1s;
+}
+
+.btn:hover,
+.btn:nth-child(2){
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn:nth-child(2):hover{
+    background-color: #2e6ceb;
+    box-shadow: 0 0 15px #2e6ceb;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-right: 30px;
+}
+
+.icon-box i{
+    border: 2px solid #2e6ceb;
+    color: #2e6ceb;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 8px;
+    cursor: pointer;
+    transition: .3s;
+    opacity: 0;
+    animation: to-bottom 1s ease forwards var(--delay);
+
+}
+
+.icon-box i:hover {
+    color: white;
+    background-color: #2e6ceb;
+    box-shadow: 0 0 15px #2e6ceb;
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+.img {
+    width: 32vw;
+    margin-right: 90px;
+    margin-top: 100px;
+    opacity: 0;
+    animation: to-left 1s ease forwards 1s;
+}
+
+.text-box *{
+    opacity: 0;
+}
+.text-box span{
+    opacity: 1;
+}
+
+/* keyframes */
+@keyframes to-bottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes to-right {
+    0%{
+     opacity: 0;
+    transform: translateX(-50px);
+      }
+     100%{
+   opacity: 1;
+    transform: translateX(0);
+    }
+}
+    @keyframes to-left {
+        0%{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes fade-in {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes hue-rotate {
+        0%{
+            filter: hue-rotate(0deg);
+        }
+        100%{
+            filter: hue-rotate(360deg);
+        }
+    }
